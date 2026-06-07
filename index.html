@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Kumar | B.Tech CSE Portfolio</title>
+    <meta name="description" content="Portfolio of Aman Kumar - 3rd Year B.Tech CSE Student at Parul University. Full Stack Developer and AI Enthusiast.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Holographic Particle Starfield Background -->
+    <canvas id="starfield"></canvas>
+
+    <!-- Scanning Overlay for CRT/Hologram Effect -->
+    <div class="scanlines"></div>
+    <div class="hologram-glow"></div>
+
+    <!-- Navigation Header -->
+    <header id="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo-text">
+                <span class="glitch-txt" data-text="AMAN_KUMAR_">amancodexz</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active"><span class="nav-num">01.</span>// HOME</a></li>
+                    <li><a href="#about" class="nav-link"><span class="nav-num">02.</span>// ABOUT</a></li>
+                    <li><a href="#skills" class="nav-link"><span class="nav-num">03.</span>// SKILLS</a></li>
+                    <li><a href="#projects" class="nav-link"><span class="nav-num">04.</span>// PROJECTS</a></li>
+                    <li><a href="#achievements" class="nav-link"><span class="nav-num">05.</span>// LOGS</a></li>
+                    <li><a href="#certifications" class="nav-link"><span class="nav-num">06.</span>// CREDS</a></li>
+                    <li><a href="#contact" class="nav-link"><span class="nav-num">07.</span>// COMM</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="section-overlay-grid"></div>
+            
+            <!-- 3D CSS Perspective Tilting Hero Card -->
+            <div class="hero-card glass-card tilt-element scroll-reveal" data-tilt-max="12" data-tilt-speed="400">
+                <div class="card-corner corner-tl"></div>
+                <div class="card-corner corner-tr"></div>
+                <div class="card-corner corner-bl"></div>
+                <div class="card-corner corner-br"></div>
+
+                <div class="card-header-decor">
+                    <span class="decor-dot dot-red"></span>
+                    <span class="decor-dot dot-yellow"></span>
+                    <span class="decor-dot dot-green"></span>
+                    <span class="decor-title">CORE_INTERFACE_SYSTEM.EXE</span>
+                </div>
+
+                <div class="hero-card-content">
+                    <div class="cyber-badge">// SYSTEM ACTIVE: ONLINE</div>
+                    <div class="title-container">
+                        <h1 class="main-title glitch-txt" data-text="AMAN KUMAR">AMAN KUMAR</h1>
+                    </div>
+                    <h2 class="sub-title">
+                        <span class="typewriter" data-words='["Full Stack Developer", "AI Enthusiast", "CSE @ Parul University"]'></span>
+                        <span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-desc">
+                        3rd Year B.Tech Computer Science & Engineering student designing and engineering high-fidelity digital solutions at the intersection of web logic and AI patterns.
+                    </p>
+                    
+                    <!-- Three Floating CTA Buttons with Neon Glow -->
+                    <div class="hero-ctas">
+                        <a href="https://github.com/amancodexz" target="_blank" class="btn btn-primary btn-glow">
+                            <span class="btn-text"><i class="fa-brands fa-github"></i> GitHub</span>
+                            <span class="btn-glow-border"></span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="btn btn-secondary">
+                            <span class="btn-text"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</span>
+                        </a>
+                        <a href="#contact" class="btn btn-tertiary">
+                            <span class="btn-text"><i class="fa-solid fa-file-pdf"></i> View Resume</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <a href="#about">
+                    <span class="indicator-arrow"></span>
+                    <span class="indicator-text">SCROLL_SYSTEM</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-number">02.</span> ABOUT_ME</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <!-- Glassmorphism Card with Split Layout and 3D Tilt -->
+                <div class="about-card glass-card tilt-element scroll-reveal" data-tilt-max="10" data-tilt-speed="400">
+                    <div class="card-corner corner-tl"></div>
+                    <div class="card-corner corner-tr"></div>
+                    <div class="card-corner corner-bl"></div>
+                    <div class="card-corner corner-br"></div>
+                    
+                    <div class="card-header-decor">
+                        <span class="decor-dot dot-red"></span>
+                        <span class="decor-dot dot-yellow"></span>
+                        <span class="decor-dot dot-green"></span>
+                        <span class="decor-title">BIOMETRIC_PROFILE.TXT</span>
+                    </div>
+
+                    <div class="about-card-split">
+                        <!-- Left Side: 3D-rotating hexagonal avatar frame (CSS only) -->
+                        <div class="about-avatar-wrapper">
+                            <div class="hex-container">
+                                <div class="hex-frame">
+                                    <div class="hexagon">
+                                        <div class="hexagon-inner">
+                                            <i class="fa-solid fa-user-astronaut hexagon-avatar"></i>
+                                            <div class="hex-scan-line"></div>
+                                        </div>
+                                    </div>
+                                    <div class="hexagon-ring"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Side: Text details -->
+                        <div class="about-text-content">
+                            <h3>AMAN KUMAR</h3>
+                            <p class="cyber-role">CODENAME: CSE_UNDERGRAD // YEAR_2</p>
+                            <p class="bio-text">
+                                Second Year B-Tech CSE student skilled in Python, Flask, Django, and full-stack web development. 
+                                SIH 2025 Finalist. Passionate about AI, problem-solving, and building real-world projects.
+                            </p>
+                            <p class="bio-text">
+                                Dedicated to designing secure architectures, researching convolutional neural patterns, and engineering high-impact user interfaces.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animated Stats Row Below Card -->
+                <div class="stats-row scroll-reveal">
+                    <div class="stat-box glass-card">
+                        <h4 class="stat-number" data-target="8.19">0.00</h4>
+                        <p class="stat-label">CGPA</p>
+                        <span class="stat-glow"></span>
+                    </div>
+                    <div class="stat-box glass-card">
+                        <h4 class="stat-number text-resolver" data-target="SIH FINALIST">----------</h4>
+                        <p class="stat-label">RECOGNITION</p>
+                        <span class="stat-glow"></span>
+                    </div>
+                    <div class="stat-box glass-card">
+                        <h4 class="stat-number" data-target="3">0</h4>
+                        <p class="stat-label">HACKATHONS</p>
+                        <span class="stat-glow"></span>
+                    </div>
+                    <div class="stat-box glass-card">
+                        <h4 class="stat-number text-resolver" data-target="GROWING">-------</h4>
+                        <p class="stat-label">PROJECTS</p>
+                        <span class="stat-glow"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-number">03.</span> TECHNICAL_ARSENAL</h2>
+                    <div class="title-line title-line-scan"></div>
+                </div>
+
+                <!-- 3D Perspective Skills Grid -->
+                <div class="skills-3d-plane">
+                    <!-- Languages (Cyan) -->
+                    <div class="skills-category-card glass-card scroll-reveal-3d cyan-theme" style="--card-index: 0">
+                        <div class="card-corner corner-tl"></div>
+                        <div class="card-corner corner-tr"></div>
+                        <div class="card-corner corner-bl"></div>
+                        <div class="card-corner corner-br"></div>
+                        <h3 class="category-title text-cyan">// LANGUAGES</h3>
+                        <div class="badges-grid">
+                            <span class="skill-badge badge-cyan" style="--bob-delay: 0.1s"><i class="fa-brands fa-java"></i> Java</span>
+                            <span class="skill-badge badge-cyan" style="--bob-delay: 0.3s"><i class="fa-solid fa-code"></i> C</span>
+                            <span class="skill-badge badge-cyan" style="--bob-delay: 0.5s"><i class="fa-brands fa-python"></i> Python</span>
+                        </div>
+                    </div>
+
+                    <!-- Web (Purple) -->
+                    <div class="skills-category-card glass-card scroll-reveal-3d purple-theme" style="--card-index: 1">
+                        <div class="card-corner corner-tl"></div>
+                        <div class="card-corner corner-tr"></div>
+                        <div class="card-corner corner-bl"></div>
+                        <div class="card-corner corner-br"></div>
+                        <h3 class="category-title text-purple">// WEB DEV</h3>
+                        <div class="badges-grid">
+                            <span class="skill-badge badge-purple" style="--bob-delay: 0.2s"><i class="fa-brands fa-html5"></i> HTML</span>
+                            <span class="skill-badge badge-purple" style="--bob-delay: 0.4s"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                            <span class="skill-badge badge-purple" style="--bob-delay: 0.6s"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks (Green) -->
+                    <div class="skills-category-card glass-card scroll-reveal-3d green-theme" style="--card-index: 2">
+                        <div class="card-corner corner-tl"></div>
+                        <div class="card-corner corner-tr"></div>
+                        <div class="card-corner corner-bl"></div>
+                        <div class="card-corner corner-br"></div>
+                        <h3 class="category-title text-green">// FRAMEWORKS</h3>
+                        <div class="badges-grid">
+                            <span class="skill-badge badge-green" style="--bob-delay: 0.15s"><i class="fa-solid fa-layer-group"></i> MERN Stack <span class="badge-status">(In Progress)</span></span>
+                            <span class="skill-badge badge-green" style="--bob-delay: 0.35s"><i class="fa-solid fa-flask"></i> Flask</span>
+                            <span class="skill-badge badge-green" style="--bob-delay: 0.55s"><i class="fa-solid fa-cubes"></i> Django</span>
+                        </div>
+                    </div>
+
+                    <!-- Concepts (Orange) -->
+                    <div class="skills-category-card glass-card scroll-reveal-3d orange-theme" style="--card-index: 3">
+                        <div class="card-corner corner-tl"></div>
+                        <div class="card-corner corner-tr"></div>
+                        <div class="card-corner corner-bl"></div>
+                        <div class="card-corner corner-br"></div>
+                        <h3 class="category-title text-orange">// CONCEPTS</h3>
+                        <div class="badges-grid">
+                            <span class="skill-badge badge-orange" style="--bob-delay: 0.25s"><i class="fa-solid fa-gears"></i> DSA</span>
+                            <span class="skill-badge badge-orange" style="--bob-delay: 0.45s"><i class="fa-solid fa-diagram-project"></i> OOP</span>
+                            <span class="skill-badge badge-orange" style="--bob-delay: 0.65s"><i class="fa-solid fa-database"></i> DBMS</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools (Pink) -->
+                    <div class="skills-category-card glass-card scroll-reveal-3d pink-theme" style="--card-index: 4">
+                        <div class="card-corner corner-tl"></div>
+                        <div class="card-corner corner-tr"></div>
+                        <div class="card-corner corner-bl"></div>
+                        <div class="card-corner corner-br"></div>
+                        <h3 class="category-title text-pink">// DEV TOOLS</h3>
+                        <div class="badges-grid">
+                            <span class="skill-badge badge-pink" style="--bob-delay: 0.3s"><i class="fa-brands fa-git-alt"></i> Git</span>
+                            <span class="skill-badge badge-pink" style="--bob-delay: 0.5s"><i class="fa-brands fa-github"></i> GitHub</span>
+                            <span class="skill-badge badge-pink" style="--bob-delay: 0.7s"><i class="fa-solid fa-terminal"></i> VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-number">04.</span> CORE_PROJECTS</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 (3D Flip Card - Crop Prediction AI) -->
+                    <div class="project-card-container scroll-reveal">
+                        <!-- Featured Ribbon -->
+                        <div class="featured-ribbon">FEATURED</div>
+                        
+                        <div class="project-card-inner">
+                            <!-- Front -->
+                            <div class="project-card-front glass-card">
+                                <div class="project-icon-wrapper">
+                                    <svg class="crop-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C12 2 15 6 15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 6 12 2 12 2Z" stroke="#00f5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 13V22" stroke="#00f5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7 16C7 16 4 17 4 19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 20.1046 20 19C20 17 17 16 17 16" stroke="#7b2fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="project-meta">
+                                    <h3 class="project-title">Crop Prediction AI</h3>
+                                    <p class="project-brief">AI Recommendation System</p>
+                                    <div class="project-tags">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JS</span>
+                                        <span>AI/ML</span>
+                                    </div>
+                                </div>
+                                <div class="flip-prompt">HOVER TO REVEAL SPECIFICATIONS <i class="fa-solid fa-rotate"></i></div>
+                            </div>
+                            
+                            <!-- Back -->
+                            <div class="project-card-back glass-card">
+                                <div class="back-header">
+                                    <h4>SYSTEM DATA SHEET</h4>
+                                    <span class="system-status text-cyan">STATUS: ONLINE</span>
+                                </div>
+                                <div class="back-body">
+                                    <h5>Functional Specifications:</h5>
+                                    <p class="project-back-desc">
+                                        AI-based crop recommendation system using environmental parameters to help farmers make data-driven decisions.
+                                    </p>
+                                    <div class="tech-metrics">
+                                        <div class="metric"><span>ALGORITHM</span> <span>Random Forest</span></div>
+                                        <div class="metric"><span>ACCURACY</span> <span>96.4%</span></div>
+                                    </div>
+                                </div>
+                                <div class="back-actions">
+                                    <a href="https://github.com/amancodexz" target="_blank" class="btn btn-sm btn-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+                                    <a href="#" class="btn btn-sm btn-secondary"><i class="fa-solid fa-square-poll-vertical"></i> Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder Card: More Coming Soon -->
+                    <div class="project-card-container placeholder-container scroll-reveal">
+                        <div class="project-placeholder-card glass-card">
+                            <div class="placeholder-content">
+                                <div class="placeholder-icon-pulse">
+                                    <i class="fa-solid fa-network-wired pulse-icon"></i>
+                                </div>
+                                <h3>More Coming Soon...</h3>
+                                <p>Next deployment in queue. System scanning for repository builds.</p>
+                                <div class="loading-bar"><div class="loading-progress"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Achievements Section -->
+        <section id="achievements" class="achievements-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-number">05.</span> SYSTEM_LOGS</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line-glow"></div>
+
+                    <!-- Item 1 -->
+                    <div class="timeline-item timeline-left scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card tilt-element">
+                            <div class="timeline-date">// TIMESTAMP: 2025.08</div>
+                            <h3 class="timeline-title">Grand Winner @ CyberHack India</h3>
+                            <p class="timeline-desc">
+                                Led a team of 4 to design and build an automated cloud vulnerability scanner within 36 hours. Recognized for best architectural design and implementation speed.
+                            </p>
+                            <span class="timeline-tag">Hackathon</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item timeline-right scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card tilt-element">
+                            <div class="timeline-date">// TIMESTAMP: 2024.12</div>
+                            <h3 class="timeline-title">Open Source Core Contributor</h3>
+                            <p class="timeline-desc">
+                                Contributed multiple optimization patches to a prominent Node.js canvas rendering library, speeding up shape plotting and animation loops by 22%.
+                            </p>
+                            <span class="timeline-tag">Open Source</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item timeline-left scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card tilt-element">
+                            <div class="timeline-date">// TIMESTAMP: 2024.04</div>
+                            <h3 class="timeline-title">Research Publication: WebGL Performance</h3>
+                            <p class="timeline-desc">
+                                Published a paper exploring optimization strategies for complex 3D rendering algorithms over mobile browser viewports in the International Science Journal.
+                            </p>
+                            <span class="timeline-tag">Research</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Certifications Section -->
+        <section id="certifications" class="certs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-number">06.</span> CREDENTIALS</h2>
+                    <div class="title-line"></div>
+                </div>
+            </div>
+
+            <!-- infinite slider -->
+            <div class="carousel-wrapper scroll-reveal">
+                <div class="carousel-track" id="cert-carousel">
+                    <div class="carousel-slide glass-card">
+                        <div class="cert-icon-wrapper"><i class="fa-brands fa-aws text-cyan"></i></div>
+                        <h4 class="cert-name">AWS Certified Developer</h4>
+                        <p class="cert-org">Amazon Web Services</p>
+                        <span class="cert-id">ID: AWS-DEV-9810</span>
+                    </div>
+                    <div class="carousel-slide glass-card">
+                        <div class="cert-icon-wrapper"><i class="fa-brands fa-google text-purple"></i></div>
+                        <h4 class="cert-name">Associate Cloud Engineer</h4>
+                        <p class="cert-org">Google Cloud Platform</p>
+                        <span class="cert-id">ID: GCP-ACE-4091</span>
+                    </div>
+                    <div class="carousel-slide glass-card">
+                        <div class="cert-icon-wrapper"><i class="fa-brands fa-js text-amber"></i></div>
+                        <h4 class="cert-name">Advanced JS Algorithms</h4>
+                        <p class="cert-org">freeCodeCamp Core</p>
+                        <span class="cert-id">ID: FCC-JS-8822</span>
+                    </div>
+                    <div class="carousel-slide glass-card">
+                        <div class="cert-icon-wrapper"><i class="fa-solid fa-shield-halved text-cyan"></i></div>
+                        <h4 class="cert-name">Ethical Hacking Essentials</h4>
+                        <p class="cert-org">EC-Council System</p>
+                        <span class="cert-id">ID: EC-EHE-1029</span>
+                    </div>
+                    <div class="carousel-slide glass-card">
+                        <div class="cert-icon-wrapper"><i class="fa-solid fa-code-compare text-purple"></i></div>
+                        <h4 class="cert-name">Git Automation Expert</h4>
+                        <p class="cert-org">GitHub Foundation</p>
+                        <span class="cert-id">ID: GH-GIT-5561</span>
+                    </div>
+
+                    <!-- Duplicates -->
+                    <div class="carousel-slide glass-card">
+                        <div class="cert-icon-wrapper"><i class="fa-brands fa-aws text-cyan"></i></div>
+                        <h4 class="cert-name">AWS Certified Developer</h4>
+                        <p class="cert-org">Amazon Web Services</p>
+                        <span class="cert-id">ID: AWS-DEV-9810</span>
+                    </div>
+                    <div class="carousel-slide glass-card">
+                        <div class="cert-icon-wrapper"><i class="fa-brands fa-google text-purple"></i></div>
+                        <h4 class="cert-name">Associate Cloud Engineer</h4>
+                        <p class="cert-org">Google Cloud Platform</p>
+                        <span class="cert-id">ID: GCP-ACE-4091</span>
+                    </div>
+                    <div class="carousel-slide glass-card">
+                        <div class="cert-icon-wrapper"><i class="fa-brands fa-js text-amber"></i></div>
+                        <h4 class="cert-name">Advanced JS Algorithms</h4>
+                        <p class="cert-org">freeCodeCamp Core</p>
+                        <span class="cert-id">ID: FCC-JS-8822</span>
+                    </div>
+                    <div class="carousel-slide glass-card">
+                        <div class="cert-icon-wrapper"><i class="fa-solid fa-shield-halved text-cyan"></i></div>
+                        <h4 class="cert-name">Ethical Hacking Essentials</h4>
+                        <p class="cert-org">EC-Council System</p>
+                        <span class="cert-id">ID: EC-EHE-1029</span>
+                    </div>
+                    <div class="carousel-slide glass-card">
+                        <div class="cert-icon-wrapper"><i class="fa-solid fa-code-compare text-purple"></i></div>
+                        <h4 class="cert-name">Git Automation Expert</h4>
+                        <p class="cert-org">GitHub Foundation</p>
+                        <span class="cert-id">ID: GH-GIT-5561</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-number">07.</span> ESTABLISH_COMM</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- details -->
+                    <div class="contact-info scroll-reveal">
+                        <h3>COMMUNICATION INTERFACE</h3>
+                        <p class="contact-subtitle">Transmit your credentials and messaging string to request full-system access.</p>
+                        
+                        <div class="contact-channels">
+                            <div class="channel-card glass-card">
+                                <i class="fa-solid fa-envelope channel-icon text-cyan"></i>
+                                <div class="channel-details">
+                                    <span class="channel-title">DATALINK // EMAIL</span>
+                                    <a href="mailto:aman233252@gmail.com" class="channel-link">aman233252@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="channel-card glass-card">
+                                <i class="fa-solid fa-phone channel-icon text-cyan"></i>
+                                <div class="channel-details">
+                                    <span class="channel-title">DATALINK // PHONE</span>
+                                    <a href="tel:+916202800561" class="channel-link">+91-6202800561</a>
+                                </div>
+                            </div>
+                            <div class="channel-card glass-card">
+                                <i class="fa-brands fa-github channel-icon text-purple"></i>
+                                <div class="channel-details">
+                                    <span class="channel-title">REPOSITORY // GITHUB</span>
+                                    <a href="https://github.com/amancodexz" target="_blank" class="channel-link">github.com/amancodexz</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Glowing form -->
+                    <div class="contact-form-wrapper glass-card scroll-reveal">
+                        <div class="cyber-form-header">
+                            <span class="header-status"><i class="fa-solid fa-circle-nodes pulse-icon"></i> SSL_SECURE_TUNNEL</span>
+                            <span class="encryption-type">AES_256_GCM</span>
+                        </div>
+                        <form id="cyber-contact-form" class="cyber-form" novalidate>
+                            <div class="input-group">
+                                <input type="text" id="name" required class="cyber-input" autocomplete="off">
+                                <label for="name" class="cyber-label"><span class="label-txt">ENTER_NAME</span></label>
+                                <span class="input-bar"></span>
+                                <span class="validation-msg"></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" required class="cyber-input" autocomplete="off">
+                                <label for="email" class="cyber-label"><span class="label-txt">DATALINK_EMAIL</span></label>
+                                <span class="input-bar"></span>
+                                <span class="validation-msg"></span>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" required class="cyber-input" rows="5" autocomplete="off"></textarea>
+                                <label for="message" class="cyber-label"><span class="label-txt">MESSAGE_STRING</span></label>
+                                <span class="input-bar"></span>
+                                <span class="validation-msg"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span class="btn-text">TRANSMIT_DATAPACKET</span>
+                                <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                                <span class="btn-glow-border"></span>
+                            </button>
+                        </form>
+                        <div id="form-feedback-overlay" class="form-feedback glass-card hidden">
+                            <div class="feedback-content">
+                                <i class="fa-solid fa-circle-check success-icon text-cyan"></i>
+                                <h3>TRANSMISSION_SUCCESSFUL</h3>
+                                <p>Message packet has been successfully sent to Aman's terminal. Expect reply on specified email.</p>
+                                <button id="feedback-reset-btn" class="btn btn-secondary btn-sm">SEND_ANOTHER_PACKET</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container footer-content">
+            <p class="copyright">&copy; 2026 AMAN_KUMAR_. ALL SYSTEM RIGHTS SECURED.</p>
+            <p class="latency-status">// CURRENT SYSTEM TIMEOUT: <span id="system-time">00:00:00</span></p>
+        </div>
+    </footer>
+
+    <!-- App JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
