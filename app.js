@@ -4,13 +4,20 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initLoader();
+    initCustomCursor();
+    initScrollProgressBar();
     initParticles();
     initHeaderScroll();
     initTypewriter();
     init3DTilt();
+    initTimelineProgress();
+    initGreenButtonParticles();
+    initFooterMatrix();
     initFormValidation();
     initSystemTime();
     initScrollReveal();
+    initSmoothScroll();
 });
 
 /* ==========================================================================
@@ -538,4 +545,221 @@ function initSystemTime() {
     }
     
     setInterval(updateClock, 45);
+}
+
+/* ==========================================================================
+   POLISH & INTERACTIVE UPGRADE MODULES
+   ========================================================================== */
+
+function initLoader() {
+    const loader = document.getElementById('loader-screen');
+    if (!loader) return;
+    
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+        }, 1200);
+    });
+    
+    // Safety fallback
+    setTimeout(() => {
+        if (!loader.classList.contains('fade-out')) {
+            loader.classList.add('fade-out');
+        }
+    }, 2500);
+}
+
+function initCustomCursor() {
+    const dot = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-ring');
+    if (!dot || !ring) return;
+    
+    let ringX = 0, ringY = 0;
+    let mouseX = 0, mouseY = 0;
+    let isHidden = true;
+    
+    window.addEventListener('mousemove', (e) => {
+        if (isHidden) {
+            dot.style.opacity = '1';
+            ring.style.opacity = '1';
+            isHidden = false;
+        }
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        dot.style.left = `${mouseX}px`;
+        dot.style.top = `${mouseY}px`;
+    });
+    
+    // Render loop for ring physics (lerp)
+    function animateRing() {
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+        
+        ring.style.left = `${ringX}px`;
+        ring.style.top = `${ringY}px`;
+        
+        requestAnimationFrame(animateRing);
+    }
+    animateRing();
+    
+    // Mouse hover scale bindings
+    const scaleTargets = 'a, button, input, textarea, .tilt-element, .social-icon-btn, .carousel-slide';
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.closest(scaleTargets)) {
+            ring.style.transform = 'translate(-50%, -50%) scale(1.4)';
+            ring.style.borderColor = 'var(--color-cyan)';
+            ring.style.backgroundColor = 'rgba(0, 245, 255, 0.04)';
+        }
+    });
+    document.addEventListener('mouseout', (e) => {
+        if (e.target.closest(scaleTargets)) {
+            ring.style.transform = 'translate(-50%, -50%) scale(1)';
+            ring.style.borderColor = 'var(--color-cyan-glow)';
+            ring.style.backgroundColor = 'transparent';
+        }
+    });
+}
+
+function initScrollProgressBar() {
+    const progressBar = document.getElementById('scroll-progress');
+    if (!progressBar) return;
+    
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = `${progress}%`;
+    });
+}
+
+function initTimelineProgress() {
+    const timeline = document.querySelector('.timeline-container');
+    if (!timeline) return;
+    
+    function updateTimeline() {
+        const rect = timeline.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        
+        const startOffset = viewportHeight * 0.85;
+        const endOffset = viewportHeight * 0.15;
+        
+        const timelineHeight = rect.height;
+        const timelineTop = rect.top;
+        
+        const totalHeight = timelineHeight;
+        const scrolledDistance = startOffset - timelineTop;
+        
+        let progress = 0;
+        if (scrolledDistance > 0) {
+            progress = (scrolledDistance / totalHeight) * 100;
+        }
+        
+        progress = Math.max(0, Math.min(100, progress));
+        timeline.style.setProperty('--timeline-height', `${progress}%`);
+    }
+    
+    window.addEventListener('scroll', () => {
+        requestAnimationFrame(updateTimeline);
+    });
+    window.addEventListener('resize', updateTimeline);
+    updateTimeline();
+}
+
+function initGreenButtonParticles() {
+    const btn = document.getElementById('btn-send-message');
+    if (!btn) return;
+    
+    btn.addEventListener('click', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX ? e.clientX - rect.left : rect.width / 2;
+        const y = e.clientY ? e.clientY - rect.top : rect.height / 2;
+        
+        const particleCount = 24;
+        for (let i = 0; i < particleCount; i++) {
+            const p = document.createElement('span');
+            p.classList.add('burst-particle');
+            
+            const angle = Math.random() * Math.PI * 2;
+            const velocity = Math.random() * 70 + 35;
+            const tx = Math.cos(angle) * velocity;
+            const ty = Math.sin(angle) * velocity;
+            
+            p.style.setProperty('--tx', `${tx}px`);
+            p.style.setProperty('--ty', `${ty}px`);
+            p.style.left = `${x}px`;
+            p.style.top = `${y}px`;
+            
+            const size = Math.random() * 4 + 3;
+            p.style.width = `${size}px`;
+            p.style.height = `${size}px`;
+            p.style.background = Math.random() > 0.5 ? 'var(--color-green-neon)' : 'var(--color-cyan)';
+            
+            btn.appendChild(p);
+            
+            p.addEventListener('animationend', () => {
+                p.remove();
+            });
+        }
+    });
+}
+
+function initFooterMatrix() {
+    const canvas = document.getElementById('footer-matrix');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    
+    let width = (canvas.width = canvas.parentElement.offsetWidth);
+    let height = (canvas.height = canvas.parentElement.offsetHeight);
+    
+    const fontSize = 12;
+    const columns = Math.floor(width / 18) + 1;
+    const yPositions = Array(columns).fill(0).map(() => Math.random() * -height);
+    
+    const chars = '01';
+    
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(10, 10, 15, 0.08)';
+        ctx.fillRect(0, 0, width, height);
+        
+        ctx.fillStyle = 'rgba(57, 255, 20, 0.15)';
+        ctx.font = `${fontSize}px monospace`;
+        
+        yPositions.forEach((y, index) => {
+            const text = chars[Math.floor(Math.random() * chars.length)];
+            const x = index * 18;
+            ctx.fillText(text, x, y);
+            
+            if (y > height && Math.random() > 0.98) {
+                yPositions[index] = 0;
+            } else {
+                yPositions[index] = y + 10;
+            }
+        });
+    }
+    
+    setInterval(drawMatrix, 50);
+    
+    window.addEventListener('resize', () => {
+        width = canvas.width = canvas.parentElement.offsetWidth;
+        height = canvas.height = canvas.parentElement.offsetHeight;
+    });
+}
+
+function initSmoothScroll() {
+    document.querySelectorAll('.nav-link, .scroll-indicator a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
 }
